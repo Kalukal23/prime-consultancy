@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard - Prime Consultancy</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+    .status-pending { color: orange; }
+    .status-confirmed { color: green; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+    
+    <div class="card">
+      <h2>Appointments</h2>
+      <div id="appointmentsTable"></div>
+    </div>
+    
+    <div class="card">
+      <h2>Contact Inquiries</h2>
+      <div id="contactsTable"></div>
+    </div>
+  </div>
+  
+  <script>
+    const API_URL = 'http://localhost:5000/api';
+    
+    async function loadAppointments() {
+      const res = await fetch(`${API_URL}/appointments`);
+      const data = await res.json();
+      document.getElementById('appointmentsTable').innerHTML = `
+        <table>
+          <tr><th>Name</th><th>Email</th><th>Service</th><th>Date</th><th>Status</th></tr>
+          ${data.map(a => `
+            <tr>
+              <td>${a.fullName}</td>
+              <td>${a.email}</td>
+              <td>${a.service}</td>
+              <td>${new Date(a.preferredDate).toLocaleDateString()}</td>
+              <td class="status-${a.status}">${a.status}</td>
+            </tr>
+          `).join('')}
+        </table>
+      `;
+    }
+    
+    async function loadContacts() {
+      const res = await fetch(`${API_URL}/contacts`);
+      const data = await res.json();
+      document.getElementById('contactsTable').innerHTML = `
+        <table>
+          <tr><th>Name</th><th>Email</th><th>Message</th><th>Date</th></tr>
+          ${data.map(c => `
+            <tr>
+              <td>${c.fullName}</td>
+              <td>${c.email}</td>
+              <td>${c.message.substring(0, 50)}...</td>
+              <td>${new Date(c.createdAt).toLocaleDateString()}</td>
+            </tr>
+          `).join('')}
+        </table>
+      `;
+    }
+    
+    loadAppointments();
+    loadContacts();
+  </script>
+</body>
+</html>

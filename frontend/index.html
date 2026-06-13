@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Consultancy PLC | Strategic Consulting Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <nav class="navbar container">
+    <div class="logo">
+      <span>PRIME</span><span>CONSULTANCY</span>
+    </div>
+    <button class="mobile-menu-btn" id="menuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#appointment" class="btn-primary desktop-btn">Book Now</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Strategic Consulting Solutions for Sustainable Growth</h1>
+        <p class="hero-subtitle">Empowering businesses, NGOs, and institutions with expert strategy, feasibility studies, organizational development, project evaluation, and capacity-building services.</p>
+        <div class="hero-buttons">
+          <a href="#appointment" class="btn-primary">Book Consultation <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="btn-secondary">Contact Us</a>
+        </div>
+        <div class="stats-container" id="statsContainer">
+          <!-- Stats loaded from API -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>Comprehensive consulting solutions tailored to your business needs</p>
+      </div>
+      <div class="services-grid" id="servicesGrid">
+        <!-- Services loaded from API -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="about" class="section bg-light">
+    <div class="container">
+      <div class="two-columns">
+        <div class="col-left">
+          <div class="image-placeholder">
+            <i class="fas fa-handshake"></i>
+          </div>
+        </div>
+        <div class="col-right">
+          <h2>Why Choose Prime Consultancy</h2>
+          <div class="features-list" id="featuresList">
+            <!-- Features loaded via JS -->
+          </div>
+          <div class="mini-stats">
+            <div class="stat-card"><h3>10+</h3><p>Years Experience</p></div>
+            <div class="stat-card"><h3>200+</h3><p>Happy Clients</p></div>
+            <div class="stat-card"><h3>15+</h3><p>Industries</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Client Testimonials</h2>
+        <p>Hear from our satisfied clients</p>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Testimonials loaded from API -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment & Contact -->
+  <section id="appointment" class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Book a Consultation</h2>
+        <p>Let's discuss how we can help your organization grow</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-form-card">
+          <h3>Request Consultation</h3>
+          <form id="appointmentForm">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="fullName" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" id="email" required placeholder="hello@company.com">
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" id="phone" required placeholder="+251...">
+            </div>
+            <div class="form-group">
+              <label>Company Name</label>
+              <input type="text" id="company" placeholder="Your organization">
+            </div>
+            <div class="form-group">
+              <label>Service Needed *</label>
+              <select id="service">
+                <option value="Corporate Strategy">Corporate & Business Strategy</option>
+                <option value="Growth Transformation">Growth & Business Transformation</option>
+                <option value="Organizational Design">Organizational Design & Development</option>
+                <option value="Feasibility Study">Project Feasibility Study</option>
+                <option value="Training">Training & Capacity Building</option>
+                <option value="Research">Research & Advisory Services</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Preferred Date *</label>
+              <input type="date" id="preferredDate" required>
+            </div>
+            <button type="submit" class="btn-primary submit-btn">Request Consultation →</button>
+          </form>
+          <div id="formMessage" class="form-message"></div>
+        </div>
+
+        <div class="contact-info-card" id="contact">
+          <h3>Contact Information</h3>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div><strong>Address</strong><br>Bole, Addis Ababa, Ethiopia</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+              <div><strong>Phone</strong><br>+251 911 134 390</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div><strong>Email</strong><br>etayehuyibeltal@gmail.com</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+              <div><strong>WhatsApp</strong><br>+251 950370926</div>
+            </div>
+          </div>
+          <div class="map-placeholder">
+            <i class="fas fa-map-pin"></i> Bole, Addis Ababa
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section (Message) -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-message-card">
+        <h3>Send us a Message</h3>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="msgName" placeholder="Full Name *" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="msgEmail" placeholder="Email Address *" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="msgCompany" placeholder="Company Name">
+            </div>
+            <div class="form-group">
+              <input type="tel" id="msgPhone" placeholder="Phone Number">
+            </div>
+          </div>
+          <div class="form-group">
+            <select id="msgService">
+              <option value="">Select Service</option>
+              <option>Corporate Strategy</option>
+              <option>Feasibility Study</option>
+              <option>Organizational Design</option>
+              <option>Training</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea id="msgMessage" rows="4" placeholder="Your message *" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+        <div id="contactMessage" class="form-message"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>PRIME CONSULTANCY</h4>
+        <p>Strategic consulting solutions for sustainable growth across Ethiopia and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#">Corporate Strategy</a>
+        <a href="#">Feasibility Studies</a>
+        <a href="#">Project Evaluation</a>
+        <a href="#">Training</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Prime Consultancy PLC. All rights reserved.</p>
+      <div>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
