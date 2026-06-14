@@ -113,9 +113,9 @@ export default function Contact() {
                   <div className="contact-icon"><Phone size={24} /></div>
                   <div><strong>Phone</strong><br/>+251 911 134 390</div>
                 </a>
-                <a href="mailto:etayehuyibeltal@gmail.com" className="contact-item" style={{textDecoration: 'none'}}>
+                <a href="mailto:Mastewalalebel0@gmail.com" className="contact-item" style={{textDecoration: 'none'}}>
                   <div className="contact-icon"><Mail size={24} /></div>
-                  <div><strong>Email</strong><br/>etayehuyibeltal@gmail.com</div>
+                  <div><strong>Email</strong><br/>Mastewalalebel0@gmail.com</div>
                 </a>
                 <a href="https://wa.me/251950370926" target="_blank" rel="noopener noreferrer" className="contact-item" style={{textDecoration: 'none'}}>
                   <div className="contact-icon"><MessageCircle size={24} /></div>
