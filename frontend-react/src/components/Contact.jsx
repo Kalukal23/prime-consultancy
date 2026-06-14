@@ -109,22 +109,22 @@ export default function Contact() {
                   <div className="contact-icon"><MapPin size={24} /></div>
                   <div><strong>Address</strong><br/>Bole, Addis Ababa, Ethiopia</div>
                 </div>
-                <div className="contact-item">
+                <a href="tel:+251911134390" className="contact-item" style={{textDecoration: 'none'}}>
                   <div className="contact-icon"><Phone size={24} /></div>
                   <div><strong>Phone</strong><br/>+251 911 134 390</div>
-                </div>
-                <div className="contact-item">
+                </a>
+                <a href="mailto:etayehuyibeltal@gmail.com" className="contact-item" style={{textDecoration: 'none'}}>
                   <div className="contact-icon"><Mail size={24} /></div>
                   <div><strong>Email</strong><br/>etayehuyibeltal@gmail.com</div>
-                </div>
-                <div className="contact-item">
+                </a>
+                <a href="https://wa.me/251950370926" target="_blank" rel="noopener noreferrer" className="contact-item" style={{textDecoration: 'none'}}>
                   <div className="contact-icon"><MessageCircle size={24} /></div>
                   <div><strong>WhatsApp</strong><br/>+251 950370926</div>
-                </div>
+                </a>
               </div>
-              <div className="map-placeholder">
+              <a href="https://www.google.com/maps/search/Prime+Consultant+Private+Limited+Company" target="_blank" rel="noopener noreferrer" className="map-placeholder">
                 <MapPin size={24} /> Bole, Addis Ababa
-              </div>
+              </a>
             </div>
           </div>
         </div>
