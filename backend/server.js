@@ -14,6 +14,7 @@ const appointments = require('./routes/appointments');
 const contacts = require('./routes/contacts');
 const services = require('./routes/services');
 const testimonials = require('./routes/testimonials');
+const auth = require('./routes/auth');
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use('/api/appointments', appointments);
 app.use('/api/contacts', contacts);
 app.use('/api/services', services);
 app.use('/api/testimonials', testimonials);
+app.use('/api/auth', auth);
 
 // Basic route
 app.get('/api/health', (req, res) => {

@@ -3,8 +3,11 @@ const router = express.Router();
 const Appointment = require('../models/Appointment');
 
 // @desc    Get all appointments
+const { protect } = require('../middleware/auth');
+
+// @desc    Get all appointments
 // @route   GET /api/appointments
-router.get('/', async (req, res) => {
+router.get('/', protect, async (req, res) => {
   try {
     const appointments = await Appointment.find().sort({ createdAt: -1 });
     res.json(appointments);

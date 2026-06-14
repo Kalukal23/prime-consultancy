@@ -16,10 +16,13 @@ const ContactSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  isRead: {
-    type: Boolean,
-    default: false,
+  status: {
+    type: String,
+    enum: ['pending', 'replied'],
+    default: 'pending'
   },
+  replyMessage: String,
+  repliedAt: Date,
   createdAt: {
     type: Date,
     default: Date.now,
